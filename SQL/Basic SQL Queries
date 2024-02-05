@@ -1,7 +1,3 @@
-Question 1 : Pizza Delivery Status
-              A pizza company is taking orders from customers, and each pizza ordered is added to their database as a separate order.
-              Each order has an associated status, "CREATED or SUBMITTED or DELIVERED'. An order's Final_ Status is calculated based on status as follows:
-           --> Write a query to report the customer_name and Final_Status of each customer's arder. Order the results by customer
-            name.
-
+1. Please Refer to "https://github.com/mahid721/Practice-Questions/blob/main/SQL/Top%2010%20SQL%20Queries.xlsx -- > Top 10 SQL Queries.xlsx" It Has 10 SQL Questions.
+2. 
 
