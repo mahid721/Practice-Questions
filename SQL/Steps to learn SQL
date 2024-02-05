@@ -1,0 +1,161 @@
+Step by Step guide to learn SQL
+1.	Understand the fundamentals:
+Understanding what is SQL, why is it used and where is it used can help you to better understand your purpose of learning SQL. Get familiar with the following terms:
+o	What is Data, Database and RDBMS
+o	What is SQL and what is the purpose of using it?
+o	How data is stored in RDBMS?
+EXERCISE: Install IDE Microsoft SQL Server, MySQL, Oracle etc. – Will share the videos to install SQL.
+2.	SQL Server Installation
+a.	https://www.youtube.com/watch?v=iaUXjTL_F9U
+
+3.	Learn the SQL commands:
+a.	DDL commands
+i.	CREATE
+ii.	ALTER
+iii.	DROP
+iv.	TRUNCATE
+v.	Data type
+1.	VARCHAR
+2.	NVARCHAR
+3.	INT
+4.	DATE
+5.	FLOAT
+6.	BOOLEAN
+vi.	Constraints
+1.	PRIMARY KEY
+2.	FOREIGN KEY — Will explain while explaining joins
+3.	UNIQUE
+4.	CHECK
+5.	NULL
+6.	Default
+7.	Identity
+8.	NOT NULL
+
+b.	DML commands
+i.	INSERT
+ii.	UPDATE – We will explain clearly after where clause
+iii.	DELETE -- We will explain clearly after where clause
+iv.	MERGE command (Which we can use rarely will cover in last).
+c.	TCL commands
+i.	COMMIT
+ii.	ROLLBACK
+EXERCISE: Check out how table data reacts when using commit and rollback after performing DML operation on your sample tables.
+d.	DCL commands -- Optional
+i.	GRANT
+ii.	REVOKE 
+e.	DQL commands 
+i.	SELECT
+ii.	FROM
+iii.	WHERE
+Once you have learnt the different SQL commands and have practiced creating some sample tables and loaded some data into them, it is time to write SQL Queries. 
+Start with some basic SQL Queries using the below concepts:
+f.	SIMPLE  SQL QURY 
+i.	SELECT COULMN_NAMES FROM TABLE_NAME 
+g.	COMPLEX SQL QURY
+i.	SELECT COULMN_NAMES
+FROM TABLE_NAME JOIN TABLE_NAMES 
+WHERE CONDITION (LHS = RHS)
+GROUP BY (non aggregated column names)
+HAVING CONDITION (Filterations on aggregations)
+ORDER BY column_name asc/desc
+h.	SYSTEM DATABASE
+i.	Master
+ii.	Model
+iii.	MsDB
+iv.	TempDB
+
+i.	Aggregate functions 
+i.	MAX
+ii.	MIN
+iii.	SUM
+iv.	AVG
+v.	COUNT
+j.	Practice writing some SQL Queries using some of the below operators:
+i.	Comparison Operators like =, <>, != , >, <, >=, ≤
+ii.	Arithmetic Operators like +, -, *, /, %
+iii.	Logical Operators like Operators – AND, OR, IN (NOT IN), BETWEEN (NOT BETWEEN), LIKE (NOT LIKE), IS NULL (IS NOT NULL)
+k.	Set Operators 
+i.	UNION
+ii.	UNION ALL
+iii.	INTERSECT
+iv.	MINUS
+l.	CASE statement
+m.	DISTINCT and LIMIT/TOP clause
+n.	ORDER BY
+o.	Subqueries/Nested Subqueries
+i.	Scalar subquery
+ii.	Multi row subquery
+iii.	Correlated subquery 
+p.	WITH Clause or CTE Table
+i.	Non-Recursive
+ii.	Recurring CTE
+q.	GROUP BY, HAVING clause
+r.	Use aggregate functions with and without group by.
+i.	It is not mandatory to use aggregate functions with GROUP BY always so check out the different queries where you may need to use group by and where you may not need it. 
+s.	Different JOINS.
+i.	Inner Join
+ii.	LEFT Outer Join
+iii.	RIGHT Outer Join
+iv.	FULL Outer Join
+v.	Self-Join 
+vi.	Cross Join.
+vii.	Handling Data Retrieval with EXISTS and NOT EXISTS Operators 
+
+t.	Inbuilt Date conversion functions
+i.	GETDATE()
+ii.	DateDiff
+iii.	DateAdd
+iv.	DatePart
+v.	Datesub
+vi.	DATENAME
+vii.	Write queries using inbuilt date conversion functions like to_date or date_format or cast etc.
+u.	Inbuilt String conversion functions
+i.	SubStr
+ii.	Charindex
+iii.	Instr
+iv.	Write queries using inbuilt string functions to fetch part of a text from data such as substring, position, instr etc.
+v.	There would be no of functions for different SQL operations.
+>> Like to add lead zero’s 
+i.	Lpad
+ii.	Rpad
+iii.	Trim 
+iv.	Ltrim
+v.	Rtrim
+vi.	…..
+w.	Window functions/ Analytical Functions – Over clause
+i.	row_number()
+ii.	rank()
+iii.	dense_rank()
+iv.	first_value()
+v.	last_value()
+vi.	lead()
+vii.	lag()
+viii.	nth_value()
+ix.	ntile()
+x.	percent_rank()
+xi.	cume_dist()
+xii.	Probably one of the best features to solve complex queries are window functions so definitely spend some time to explore the most widely used window functions
+xiii.	Over Clause can be used on aggregate functions also
+x.	Views
+i.	A view can be thought of as either a virtual table or a stored query.
+ii.	Simple and Complex View
+
+------------------------------------------ PL SQL --------------------------------------------------
+y.	Stored Procedures
+z.	Functions
+i.	Table variable (Create type table @tablename(col1 datatype, col2 datatype… coln))
+
+aa.	Indexes
+i.	Clustered Index
+ii.	Non-Clustered Index
+bb.	Triggers
+cc.	Cursors
+dd.	Pivot and Unpivot 
+ee.	Merge
+
+Learning Resources
+•	W3Schools - for SQL syntax
+•	LearnSQL.com - for SQL course
+•	StrataScratch - for practicing basic, intermediate and complex SQL queries
+•	LeetCode - for practicing basic SQL queries
+
