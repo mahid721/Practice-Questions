@@ -1,0 +1,26 @@
+Q 1: Create a program that checks if a given string is a
+palindrome.
+Q 2: Write a function to count the number of vowels in a
+given string.
+Q 3: Write a function to count the number of vowels in a
+given string.
+
+1.Given a list of words, concatenate them into a single
+string separated by spaces'
+2. Create a function to reverse a given string'
+Write a program that takes a sentence as input and
+counts the number of words in it'
+3. Implement a function that checks if a given string is a
+pangram (contains all letters of the alphabet)'
+4. Given a string, write a function to remove all vowels from
+it and return the modified string'
+5. Write a Python program to find the length of the longest
+word in a sentence'
+6. Create a function that takes a sentence as input and
+returns the sentence in reverse order'
+7. Given a list of names, count the number of names that
+start with a vowel'
+8. Write a function to remove all duplicate characters from a
+given string'
+9. Implement a program that takes a sentence and a word as
+10. input and checks if the word is present in the sentence.
