@@ -1,0 +1,74 @@
+What is Stored Procedures?
+    A Stored Procedure is a sequence statement in PL/SQL. It can do some data processing. You can use a stored procedure as a schema object in the Oracle database. You can invoke them by triggers, nested, invoked, or parameterized.
+
+What is the default syntax of the stored procedures?
+        CREATE OR REPLACE PROCEDURE <your_procedure>
+        (
+        <parameterl IN/OUT <datatype>
+        ...
+        )
+        [ IS | AS ]<declaration_part>
+        BEGIN
+        <execution part>
+        EXCEPTION
+        <exception handling part>
+        END;
+
+What do you know about stored functions?
+      You can call it also User Function or User Defined Function. Simply it is a set of PL/SQL statements that you can call by name. They are stored and compiled in a database. This function will return a value to the environment in which it is called.
+
+What is the default syntax of the stored functions?
+        CREATE OR REPLACE FUNCTION <your_procedure>
+        (
+        <parameterl IN/OUT <datatype>
+        )
+        RETURN <datatype>
+        [ IS | AS ]<declaration_part>
+        BEGIN
+        <execution part> 
+        EXCEPTION
+        <exception handling part>
+        END; 
+
+Difference between Stored Procedure, SQL Function, and Trigger
+    Executable :  
+        Store procedure: We can execute the stored procedures when required.
+        Function: We can call a function whenever required. Function can't be executed because a function is not in pre-compiled form.
+        Trigger: Trigger can be executed automatically on specified action on a table like, update, delete, or update.
+    Calling : 
+        Stored procedure: Stored Procedures can't be called from a function because functions can be called from a select statement and Stored Procedures can't be called from. But you can call Store Procedure from Trigger.
+        Function: Function can be called from Store Procedure or Trigger.
+        Trigger: Trigger can’t be called from Store Procedure or Function.
+    Parameter 
+        Store procedure: Stored Procedures can accept any type of parameter. Stored Procedures also accept out parameter.
+        Function: Function can accept any type of parameter. But function can’t accept out parameter.
+        Trigger: We can’t pass a parameter to trigger.
+    Return
+        Store procedure: Stored Procedures may or may not return any values (Single or table) on execution.
+        Function: Function must return any value.
+        Trigger: Trigger never return value on execution.
+
+What are the differences between a function and a stored procedure in SQL Server?
+    In SQL Server, functions and stored procedures are both database objects that can contain a set of SQL statements. However, there are key differences between them:
+      1. Return Type:
+            - Function: Returns a single value or a table variable. It must have a valid data type as its return type.
+            - Stored Procedure: Does not necessarily return a value. It can have output parameters, but it doesn't have a return type like a function.
+      2. Usage in Queries:
+            - Function: Can be used in a SELECT statement or WHERE clause, like a part of an expression.
+            - Stored Procedure: Typically used to perform an action, and its results may not be directly used in a query.
+      3. Transaction Handling:
+            - Function: Cannot modify the state of the database, i.e., cannot perform INSERT, UPDATE, or DELETE operations.
+            - Stored Procedure: Can include transaction control statements, allowing changes to the database.
+      4. Modifiability:
+            - Function: Designed for read-only operations. Changes in data should be done through other SQL statements outside of the function.
+            - Stored Procedure: Can modify data and perform a variety of actions, making them more versatile for procedural tasks.
+      5. Parameters:
+            - Function: Accepts input parameters and returns a value based on those parameters.
+            - Stored Procedure: Can have input and output parameters but does not return a value like a function.
+      6. Inclusion in Queries:
+            - Function: Can be part of an expression in a SELECT statement.
+            - Stored Procedure: Called explicitly using the EXECUTE or EXEC statement.
+      7. Error Handling:
+          - Function: Typically, errors are handled through the use of TRY...CATCH blocks.
+          - Stored Procedure: Supports more complex error handling, including the ability to use the @@ERROR variable.
+
