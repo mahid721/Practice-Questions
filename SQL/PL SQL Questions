@@ -124,5 +124,21 @@ What are the limitations of a View?
         Rules and Defaults cannot be associated with views.
         The ORDER BY clause is invalid in views unless TOP or FOR XML is also specified.
         Views cannot be based on temporary tables.
-    
+Cursor in PL/SQL :
+        A cursor can be basically referred to as a pointer to the context area.Context area is a memory area that is created by Oracle when SQL statement is processed.The cursor is thus responsible for holding the rows that have been returned by a SQL statement.Thus the PL/SQL controls the context area by the help of cursor.An Active set is basically the set of rows that the cursor holds. The cursor can be of two types: Implicit Cursor, and Explicit Cursor.
+    Advantages of Cursor:
+            They are helpful in performing the row by row processing and also row wise validation on each row.
+            Better concurrency control can be achieved by using cursors.
+            Cursors are faster than while loops.
+    Disadvantages of Cursor:
+            They use more resources each time and thus may result in network round trip.
+            More number of network round trips can degrade the performance and reduce the speed.
+Trigger in PL/SQL :
+        A Trigger is basically a program which gets automatically executed in response to some events such as modification in the database.Some of the events for their execution are DDL statement, DML statement or any Database operation.Triggers are thus stored within the database and come into action when specific conditions match.Hence, they can be defined on any schema, table, view etc. There are six types of triggers: BEFORE INSERT, AFTER INSERT, BEFORE UPDATE, AFTER UPDATE, BEFORE DELETE, and AFTER DELETE.
+    Advantages of Trigger:
+            They are helpful in keeping the track of all the changes within the database.
+            They also help in maintaining the integrity constraints.
+    Disadvantages of Trigger:
+            They are very difficult to view which makes the debugging also difficult.
+            Too much use of the triggers or writing complex codes within a trigger can slow down the performance.    
 
