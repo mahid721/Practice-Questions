@@ -205,6 +205,41 @@ Certain conditions need to be met before executing either of the above statement
 Order of Execution of SQL sattements ?
     -- > firstly check the syntax correction
     From --> Join --> Where --> Group By --> Having --> Select(Here what ever operations we have those will run like DISTINCT, Columns, Agg functions) --> Order By --> Limit/Top 
+What is a Temporary SQL Table?
+      A temporary SQL table, also known as a temp table, is a table that is created and used within the context of a specific session or transaction in a database management system. It is designed to store temporary data that is needed for a short duration and does not require a permanent storage solution.
+Temporary Tables in SQL Server 
+      Temporary tables provide temporary data storage in exact form of original tables for quick access of data. Temporary tables are stored in TempDB. They work like a regular table in that you can perform the operations select, insert and delete as for a regular table. If created inside a stored procedure, they are destroyed upon completion of the stored procedure.
+What are types of temporary tables in SQL Server?
+      There are two types of temporary tables; one is local and the other is global.
+      Local Temporary Tables
+            Local temporary tables are the tables stored in tempdb. Local temporary tables are temporary tables that are available only to the session that created them. These tables are automatically destroyed at the termination of the procedure or session. They are specified with the prefix #, for example, #table_name, and these temp tables can be created with the same name in multiple windows.
+                  Creating a local temporary table
+                        create table #table_name
+                        (
+                        column_name varchar(20),
+                        column_no int
+                        )
+      Global Temporary Tables
+      Global temporary tables are also stored in tempdb. Global temporary tables are temporary tables that are available to all sessions and all users. They have dropped automatically when the last session using the temporary table has been completed. They are specified with the prefix #, for example, ##table_name.
+            Creating Global Temporary Table
+                        create table ##GlobalTemporaryTable
+                        (
+                        column_name varchar(20),
+                        column_no int
+                        )
+      Both tables are stored in the tempdb system database.
+Where is the temporary table stored in SQL Server?
+      Temporary tables are stored inside the Temporary Folder of TempDB. Whenever we create a temporary table, it goes to the Temporary folder of the tempdb database. tempdb -> temporary tables.
+What is the difference between a temp table and a regular table? 
+      Difference between Temporary Tables VS Regular Table
+      A Temporary table differs in the following two ways from regular tables:
+      Each temporary table is implicitly dropped by the system.
+      Each temporary table is stored in the tempdb system database. The table variable doesn't.
+      How to Drop Temporary Tables in SQL Server?
+      We can use the DROP SQL statement to drop a temp table. 
+Drop Temporary Tables
+            We can delete the temporary tables using a DROP TABLE command as follows
+            Syntax -->DROP TABLE #table_name1,#table_name2
 Refer below Link : Basic Interview Quetions-- >
       1. https://www.interviewbit.com/sql-interview-questions/#sql
       2. https://www.datacamp.com/blog/top-sql-interview-questions-and-answers-for-beginners-and-intermediate-practitioners
