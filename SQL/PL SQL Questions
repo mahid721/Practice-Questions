@@ -71,4 +71,58 @@ What are the differences between a function and a stored procedure in SQL Server
       7. Error Handling:
           - Function: Typically, errors are handled through the use of TRY...CATCH blocks.
           - Stored Procedure: Supports more complex error handling, including the ability to use the @@ERROR variable.
+What is a View in SQL Server?
+        A view is nothing more than a saved SQL query. A view can also be considered as a virtual table. So, we can think of a view either as a compiled SQL query or a virtual table. As a view represents a virtual table it does not physically store any data by default. When we query a view we actually, retrieve the data from the underlying database tables.
+What are the differences between a table and a view?
+        When compared with a table we have the following differences between a table and view.
+    a. The table is physical and the view is logical
+    b. A table is an independent object whereas view is a dependent object that is a view depends on a table or tables from which it is loading the data.
+    c. When a new table is created from an existing table the new and old tables are independent themselves that is the changes of one table will not be reflected into the other table whereas if a view is created based on a table any changes that are performed on the table reflects into the view and any changes performed on the view reflected in the table also.   
+    Syntax :
+        Create view View_name 
+        As
+        Select Columns From Table_name;
+How many types of views are there in SQL Server?
+      1. Simple view and Updatable views
+      2. Complex view and non-updatable views.
+What is a simple view or Updatable view?
+        The view which is created basing on the columns of a single table is known as the simple view.
+        We can perform all DML operations on a simple view so that a simple view is also called an updatable view or dynamic view.
+What is a complex View in SQL Server?
+        When we create a view on more than 1 table then it is known as the complex view.
+        On a complex view, we cannot perform DML operations so that a complex view is also called a non-updatable or static view.
+Can we drop a table that has dependent views on it?
+        Yes, we can drop a table even if any dependent views are associated with it, but the views that are associated with it will not be dropped. They will still execute in the database only with the status as inactive object and all those views become active and start functioning provided the table is recreated.
+Can we create a view based on other views?
+        Yes, we can create a view based on other views. Usually, we create views based on tables, but it is also possible to create views based on views.
+Can we update the views?
+        Yes, views can be updated. However, updating a view that is based on multiple tables, may not update the underlying tables correctly. To correctly update a view that is based on multiple tables we can make use “Instead OF triggers” in SQL Server.
+Why do we need Views in SQL Server?
+    -->  To protect the data. If we have a table containing sensitive data in certain columns, we might wish to hide those columns from certain groups of users. For instance, customer names, addresses, and social security numbers might all be stored in the same table; however, for lower-level employees like shipping clerks, you can create a view that only displays customer name and address. You can grant permissions to a view without allowing users to query the original tables.
+    --> A view is a logical table but what it stores internally is a select statement that is used for creating the view. So that whenever a user performs an operation on the view like select, insert, update or delete internally the view performs those operations on a table.
+    --> Simply we can say that view will act as an interface between the data provider (Table) and the User.
+    --> A view is created based on a table any changes that are performed on the table reflect into the view any changes performed on the view reflected in the table also.
+What are the advantages of using views? OR when do you usually use views?
+    Advantages of using views:
+    --> Views can be used to reduce the complexity of the database schema, for non-IT users. The sample view, vWEmployeesByDepartment, hides the complexity of joins. Non-IT users find it easy to query the view, rather than writing complex joins.
+    --> Views can be used as a mechanism to implement row and column level security.
+    Row Level Security:
+    --> For example, I want an end-user, to have access only to IT Department employees. If I grant him access to the underlying tblEmployees and tblDepartments tables, he will be able to see, every department employee. To achieve this, I can create a view, which returns only IT Department employees, and grants the user access to the view and not to the underlying table.
+    Column Level Security:
+    --> Salary is confidential information and I want to prevent access to that column. To achieve this, we can create a view, which excludes the Salary column, and then grant the end-user access to these views rather than the base tables.
+    --> Views can be used to present only aggregated data and hide detailed data. The view that returns summarized data, Total number of employees by Department.
+What are indexed views? Or What are materialized views?
+    --> A materialized view is a type of SQL view that is stored on the database server. This can improve performance because the view does not need to be recreated each time it is accessed
+    --> A view is a virtual table that means it does not contain any physical data. A view is nothing more than a compiled SQL query. Every time, we issue a select query against a view, we actually get the data from the underlying base tables and not from the view, as the view itself does not contain any data.
+    --> When we create an index on a view, the data gets physically stored in the view. So, when we issue a select query against an indexed view, the data is retrieved from the index without having to go to the underlying table, which will make the select statement to work slightly faster. However, the disadvantage is INSERT, UPDATE and DELETE operations will become a little slow, because every time we insert or delete a row from the underlying table, the view index needs to be updated. In short, DML operations will have a negative impact on performance.
+    Oracle refers to indexed views as materialized views.
+    --> Only the views created with schema binding can have an Index. Simply adding WITH SCHEMABINDING to the end of the CREATE VIEW statement will accomplish this. However, the effect is that any changes to the underlying tables which will impact the view are not allowed. Since the indexed view is stored physically, any schema changes would impact the schema of the stored results set. Therefore, SQL Server requires that schema binding is used to prevent the view’s schema (and therefore the underlying tables) from changing.
+    --> The first index for a view must be a UNIQUE CLUSTERED INDEX, after which, it’s possible to create non-clustered indexes against the view.
+    --> Indexed Views are heavily used in data warehouses and reporting databases that are not highly transactional.
+What are the limitations of a View?
+        We cannot pass parameters to a view.
+        Rules and Defaults cannot be associated with views.
+        The ORDER BY clause is invalid in views unless TOP or FOR XML is also specified.
+        Views cannot be based on temporary tables.
+    
 
