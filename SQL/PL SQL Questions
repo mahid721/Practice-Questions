@@ -142,3 +142,21 @@ Trigger in PL/SQL :
             They are very difficult to view which makes the debugging also difficult.
             Too much use of the triggers or writing complex codes within a trigger can slow down the performance.    
 
+In SQL, Pivot and Unpivot are relational operators that are used to transform one table into another in order to achieve more simpler view of table. Conventionally we can say that Pivot operator converts the rows data of the table into the column data. The Unpivot operator does the opposite that is it transform the column based data into rows.
+    Syntax:
+        1. Pivot:
+            SELECT (ColumnNames) 
+            FROM (TableName) 
+            PIVOT
+             ( 
+               AggregateFunction(ColumnToBeAggregated)
+               FOR PivotColumn IN (PivotColumnValues)
+             ) AS (Alias) //Alias is a temporary name for a table
+        2. Unpivot:
+            SELECT (ColumnNames) 
+            FROM (TableName) 
+            UNPIVOT
+             ( 
+               AggregateFunction(ColumnToBeAggregated)
+               FOR PivotColumn IN (PivotColumnValues)
+             ) AS (Alias)
