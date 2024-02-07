@@ -127,6 +127,7 @@
             SELECT * FROM table_name
             ORDER BY col_1 DESC;
             POWERED BY DATACAMP WORKSPACE
+
 22. What set operators do you know?
             UNION – returns the records obtained by at least one of two queries (excluding duplicates)
             UNION ALL – returns the records obtained by at least one of two queries (including duplicates)
