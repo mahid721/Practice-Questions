@@ -1,245 +1,329 @@
-
-What is a database?
+1. What is a database?
       A structured storage space where the data is kept in many tables and organized so that the necessary information can be easily fetched, manipulated, and summarized.
       A database is an organized collection of data, stored and retrieved digitally from a remote or local computer system. Databases can be vast and complex, and such databases are developed using fixed design and modeling approaches.
-What is DBMS, and what types of DBMS do you know?
+
+2. What is DBMS, and what types of DBMS do you know?
       It stands for Database Management System, a software package used to perform various operations on the data stored in a database, such as accessing, updating, wrangling, inserting, and removing data. There are various types of DBMS, such as relational, hierarchical, network, graph, or object-oriented. These types are based on the way the data is organized, structured, and stored in the system.
-What is RDBMS? Give some examples of RDBMS.
+
+3. What is RDBMS? Give some examples of RDBMS.
       It stands for Relational Database Management System. It's the most common type of DBMS used for working with data stored in multiple tables related to each other by means of shared keys. The SQL programming language is particularly designed to interact with RDBMS. Some examples of RDBMS are MySQL, PostgreSQL, Oracle, MariaDB, etc.
-What is SQL?
+
+4. What is SQL?
       SQL stands for Structured Query Language. It is the standard language for relational database management systems. It is especially useful in handling organized data comprised of entities (variables) and relations between different entities of the data.
-What is the difference between SQL and MySQL?
+
+5. What is the difference between SQL and MySQL?
       SQL is a standard language for retrieving and manipulating structured databases. On the contrary, MySQL is a relational database management system, like SQL Server, Oracle or IBM DB2, that is used to manage SQL databases.
-What are Tables and Fields?
+
+6.What are Tables and Fields?
       A table is an organized collection of data stored in the form of rows and columns. Columns can be categorized as vertical and rows as horizontal. The columns in a table are called fields while the rows can be referred to as records.
-Give some examples of common SQL commands of each type.
+
+7. Give some examples of common SQL commands of each type.
       DDL: CREATE, ALTER TABLE, DROP, TRUNCATE, and ADD COLUMN
       DML: UPDATE, DELETE, and INSERT
       DCL: GRANT and REVOKE
       TCL: COMMIT, SET TRANSACTION, ROLLBACK, and SAVEPOINT
       DQL: – SELECT
-What is the difference between the DELETE and TRUNCATE statements?
+
+8. What is the difference between the DELETE and TRUNCATE statements?
       DELETE will remove the data row by row.
       DELETE is a reversible DML (Data Manipulation Language) command used to delete one or more rows from a table based on the conditions specified in the WHERE clause.
       Instead, TRUNCATE is an irreversible DDL (Data Definition Language) command used to delete all rows from a table. 
       DELETE works slower than TRUNCATE. Also, we can't use the TRUNCATE statement for a table containing a foreign key.
-What is a constraint, and why use constraints?
+
+9. What is a constraint, and why use constraints?
       A set of conditions defining the type of data that can be input into each column of a table. Constraints ensure data integrity in a table and block undesired actions.
-What are Constraints in SQL?
-  Ans : Constraints are used to specify the rules concerning data in the table. It can be applied for single or multiple fields in an SQL table during the creation of the table or after creating using the ALTER TABLE command. The constraints are:
-      NOT NULL - Restricts NULL value from being inserted into a column.
-      CHECK - Verifies that all values in a field satisfy a condition.
-      DEFAULT - Automatically assigns a default value if no value has been specified for the field.
-      UNIQUE - Ensures unique values to be inserted into the field.
-      INDEX - Indexes a field providing faster retrieval of records.
-      PRIMARY KEY - Uniquely identifies each record in a table.
-      FOREIGN KEY - Ensures referential integrity for a record in another table.   
-What is a Query?
-  Ans : A query is a request for data or information from a database table or combination of tables. A database query can be either a select query or an action query.
-          SELECT fname, lname    /* select query */
-          FROM myDb.students
-          WHERE student_id = 1;
-          UPDATE myDB.students    /* action query */
-          SET fname = 'Captain', lname = 'America'
-          WHERE student_id = 1;
-What is the SELECT statement?
-    SELECT operator in SQL is used to select data from a database. The data returned is stored in a result table, called the result-set.
-    SELECT * FROM myDB.students;
-What are some common clauses used with SELECT query in SQL?
-Some common SQL clauses used in conjuction with a SELECT query are as follows:
-      WHERE clause in SQL is used to filter records that are necessary, based on specific conditions.
-      ORDER BY clause in SQL is used to sort the records based on some field(s) in ascending (ASC) or descending order (DESC).
-            SELECT *
-            FROM myDB.students
-            WHERE graduation_year = 2019
-            ORDER BY studentID DESC;
-      GROUP BY clause in SQL is used to group records with identical data and can be used in conjunction with some aggregation functions to produce summarized results from the database.
-      HAVING clause in SQL is used to filter records in combination with the GROUP BY clause. It is different from WHERE, since the WHERE clause cannot filter aggregated records.
-            SELECT COUNT(studentId), country
-            FROM myDB.students
-            WHERE country != "INDIA"
-            GROUP BY country
-            HAVING COUNT(studentID) > 5;
-What is a Subquery? What are its types?
-     A subquery is a query within another query, also known as a nested query or inner query. It is used to restrict or enhance the data to be queried by the main query, thus restricting or enhancing the output of the main query respectively. For example, here we fetch the contact information for students who have enrolled for the maths subject:
-            SELECT name, email, mob, address
-            FROM myDb.contacts
-            WHERE roll_no IN (
-               SELECT roll_no
-               FROM myDb.students
-               WHERE subject = 'Maths');
-      Single-row – returns at most one row.
-      Multi-row – returns at least two rows.
-      Multi-column – returns at least two columns.
-      Correlated – a subquery related to the information from the outer query.
-      Nested – a subquery inside another subquery.
-What is the difference between nested and correlated subqueries?
-      A correlated subquery is an inner query nested in a bigger (outer) query that refers to the values from the outer query for its execution, meaning that a correlated subquery depends on its outer query. Instead, a non-correlated subquery doesn't rely on the data from the outer query and can be run independently of it.
-What types of indexes do you know?
-      Unique index – doesn't allow duplicates in a table column and hence helps maintain data integrity.
-      Clustered index – defines the physical order of records of a database table and performs data searching based on the key values. A table can have only one clustered index.
-      Non-clustered index – keeps the order of the table records that doesn't match the physical order of the actual data on the disk. It means that the data is stored in one place and a non-clustered index – in another one. A table can have multiple non-clustered indexes.
-What scalar functions do you know?
-      LEN() (in other SQL flavors – LENGTH()) – returns the length of a string, including the blank spaces
-      UCASE() (in other SQL flavors – UPPER()) – returns a string converted to the upper case
-      LCASE() (in other SQL flavors – LOWER()) – returns a string converted to the lower case
-      INITCAP() – returns a string converted to the title case (i.e., each word of the string starts from a capital letter)
-      MID() (in other SQL flavors – SUBSTR()) – extracts a substring from a string
-      ROUND() – returns the numerical value rounded to a specified number of decimals
-      NOW() – returns the current date and time
-What are case manipulation functions? Give some examples.
-      Case manipulation functions represent a subset of character functions, and they're used to change the case of the text data. With these functions, we can convert the data into the upper, lower, or title case.
-      UCASE() (in other SQL flavors – UPPER()) – returns a string converted to the upper case
-      LCASE() (in other SQL flavors – LOWER()) – returns a string converted to the lower case
-      INITCAP() – returns a string converted to the title case (i.e., each word of the string starts from a capital letter)
-What are character manipulation functions? Give some examples.
-      Character manipulation functions represent a subset of character functions, and they're used to modify the text data.
-      CONCAT() – joins two or more string values appending the second string to the end of the first one
-      SUBSTR() – returns a part of a string satisfying the provided start and end points
-      LENGTH() (in other SQL flavors – LEN()) – returns the length of a string, including the blank spaces
-      REPLACE() – replaces all occurrences of a defined substring in a provided string with another substring
-      INSTR() – returns the numeric position of a defined substring in a provided string
-      LPAD() and RPAD() – return the padding of the left-side/right-side character for right-justified/left-justified value
-      TRIM() – removes all the defined characters, as well as white spaces, from the left, right, or both ends of a provided string
-What is the difference between local and global variables?
-      Local variables can be accessed only inside the function in which they were declared. Instead, global variables, being declared outside any function, are stored in fixed memory structures and can be used throughout the entire program.
-What is the default data ordering with the ORDER BY statement, and how do you change it?
-      By default, the order is ascending. To change it to descending, we need to add the DESC keyword as follows:
-      SELECT * FROM table_name
-      ORDER BY col_1 DESC;
-      POWERED BY DATACAMP WORKSPACE
-What set operators do you know?
-      UNION – returns the records obtained by at least one of two queries (excluding duplicates)
-      UNION ALL – returns the records obtained by at least one of two queries (including duplicates)
-      INTERSECT – returns the records obtained by both queries
-      EXCEPT (called MINUS in MySQL and Oracle) – returns only the records obtained by the first query but not the second one
-What is the difference between the DROP and TRUNCATE statements?
-      DROP deletes a table from the database completely, including the table structure and all the associated constraints, relationships with other tables, and access privileges. TRUNCATE deletes all rows from a table without affecting the table structure and constraints. DROP works slower than TRUNCATE. Both are irreversible DDL (Data Definition Language) commands.
-What is the difference between the HAVING and WHERE statements?
-      The first one works on aggregated data after they are grouped, while the second one checks each row individually. If both statements are present in a query, they appear in the following order: WHERE – GROUP BY – HAVING. The SQL engine interprets them also in the same order.
-What is a Primary Key?
-      The PRIMARY KEY constraint uniquely identifies each row in a table. It must contain UNIQUE values and has an implicit NOT NULL constraint. A table in SQL is strictly restricted to have one and only one primary key, which is comprised of single or multiple fields (columns).
-What is a UNIQUE constraint?
-      A UNIQUE constraint ensures that all values in a column are different. This provides uniqueness for the column(s) and helps identify each row uniquely. Unlike primary key, there can be multiple unique constraints defined per table. The code syntax for UNIQUE is quite similar to that of PRIMARY KEY and can be used interchangeably.
-What is a Foreign Key?
-      A FOREIGN KEY comprises of single or collection of fields in a table that essentially refers to the PRIMARY KEY in another table. Foreign key constraint ensures referential integrity in the relation between two tables.
-What is a Join? List its different types.
+
+10. What are Constraints in SQL?
+         Constraints are used to specify the rules concerning data in the table. It can be applied for single or multiple fields in an SQL table during the creation of the table or after creating using the ALTER TABLE command. The constraints are:
+            NOT NULL - Restricts NULL value from being inserted into a column.
+            CHECK - Verifies that all values in a field satisfy a condition.
+            DEFAULT - Automatically assigns a default value if no value has been specified for the field.
+            UNIQUE - Ensures unique values to be inserted into the field.
+            INDEX - Indexes a field providing faster retrieval of records.
+            PRIMARY KEY - Uniquely identifies each record in a table.
+            FOREIGN KEY - Ensures referential integrity for a record in another table.   
+
+11. What is a Query?
+         A query is a request for data or information from a database table or combination of tables. A database query can be either a select query or an action query.
+                SELECT fname, lname    /* select query */
+                FROM myDb.students
+                WHERE student_id = 1;
+                UPDATE myDB.students    /* action query */
+                SET fname = 'Captain', lname = 'America'
+                WHERE student_id = 1;
+
+12.What is the SELECT statement?
+          SELECT operator in SQL is used to select data from a database. The data returned is stored in a result table, called the result-set.
+          SELECT * FROM myDB.students;
+
+13. What are some common clauses used with SELECT query in SQL?
+      Some common SQL clauses used in conjuction with a SELECT query are as follows:
+            WHERE clause in SQL is used to filter records that are necessary, based on specific conditions.
+            ORDER BY clause in SQL is used to sort the records based on some field(s) in ascending (ASC) or descending order (DESC).
+                  SELECT *
+                  FROM myDB.students
+                  WHERE graduation_year = 2019
+                  ORDER BY studentID DESC;
+            GROUP BY clause in SQL is used to group records with identical data and can be used in conjunction with some aggregation functions to produce summarized results from the database.
+            HAVING clause in SQL is used to filter records in combination with the GROUP BY clause. It is different from WHERE, since the WHERE clause cannot filter aggregated records.
+                  SELECT COUNT(studentId), country
+                  FROM myDB.students
+                  WHERE country != "INDIA"
+                  GROUP BY country
+                  HAVING COUNT(studentID) > 5;
+
+14. What is a Subquery? What are its types?
+           A subquery is a query within another query, also known as a nested query or inner query. It is used to restrict or enhance the data to be queried by the main query, thus restricting or enhancing the output of the main query respectively. For example, here we fetch the contact information for students who have enrolled for the maths subject:
+                  SELECT name, email, mob, address
+                  FROM myDb.contacts
+                  WHERE roll_no IN (
+                     SELECT roll_no
+                     FROM myDb.students
+                     WHERE subject = 'Maths');
+            Single-row – returns at most one row.
+            Multi-row – returns at least two rows.
+            Multi-column – returns at least two columns.
+            Correlated – a subquery related to the information from the outer query.
+            Nested – a subquery inside another subquery.
+
+15. What is the difference between nested and correlated subqueries?
+            A correlated subquery is an inner query nested in a bigger (outer) query that refers to the values from the outer query for its execution, meaning that a correlated subquery depends on its outer query. Instead, a non-correlated subquery doesn't rely on the data from the outer query and can be run independently of it.
+
+16. What types of indexes do you know?
+            Unique index – doesn't allow duplicates in a table column and hence helps maintain data integrity.
+            Clustered index – defines the physical order of records of a database table and performs data searching based on the key values. A table can have only one clustered index.
+            Non-clustered index – keeps the order of the table records that doesn't match the physical order of the actual data on the disk. It means that the data is stored in one place and a non-clustered index – in another one. A table can have multiple non-clustered indexes.
+
+17. What scalar functions do you know?
+            LEN() (in other SQL flavors – LENGTH()) – returns the length of a string, including the blank spaces
+            UCASE() (in other SQL flavors – UPPER()) – returns a string converted to the upper case
+            LCASE() (in other SQL flavors – LOWER()) – returns a string converted to the lower case
+            INITCAP() – returns a string converted to the title case (i.e., each word of the string starts from a capital letter)
+            MID() (in other SQL flavors – SUBSTR()) – extracts a substring from a string
+            ROUND() – returns the numerical value rounded to a specified number of decimals
+            NOW() – returns the current date and time
+
+18. What are case manipulation functions? Give some examples.
+            Case manipulation functions represent a subset of character functions, and they're used to change the case of the text data. With these functions, we can convert the data into the upper, lower, or title case.
+            UCASE() (in other SQL flavors – UPPER()) – returns a string converted to the upper case
+            LCASE() (in other SQL flavors – LOWER()) – returns a string converted to the lower case
+            INITCAP() – returns a string converted to the title case (i.e., each word of the string starts from a capital letter)
+
+19. What are character manipulation functions? Give some examples.
+            Character manipulation functions represent a subset of character functions, and they're used to modify the text data.
+            CONCAT() – joins two or more string values appending the second string to the end of the first one
+            SUBSTR() – returns a part of a string satisfying the provided start and end points
+            LENGTH() (in other SQL flavors – LEN()) – returns the length of a string, including the blank spaces
+            REPLACE() – replaces all occurrences of a defined substring in a provided string with another substring
+            INSTR() – returns the numeric position of a defined substring in a provided string
+            LPAD() and RPAD() – return the padding of the left-side/right-side character for right-justified/left-justified value
+            TRIM() – removes all the defined characters, as well as white spaces, from the left, right, or both ends of a provided string
+
+20. What is the difference between local and global variables?
+            Local variables can be accessed only inside the function in which they were declared. Instead, global variables, being declared outside any function, are stored in fixed memory structures and can be used throughout the entire program.
+
+21. What is the default data ordering with the ORDER BY statement, and how do you change it?
+            By default, the order is ascending. To change it to descending, we need to add the DESC keyword as follows:
+            SELECT * FROM table_name
+            ORDER BY col_1 DESC;
+            POWERED BY DATACAMP WORKSPACE
+22. What set operators do you know?
+            UNION – returns the records obtained by at least one of two queries (excluding duplicates)
+            UNION ALL – returns the records obtained by at least one of two queries (including duplicates)
+            INTERSECT – returns the records obtained by both queries
+            EXCEPT (called MINUS in MySQL and Oracle) – returns only the records obtained by the first query but not the second one
+
+23. What is the difference between the DROP and TRUNCATE statements?
+            DROP deletes a table from the database completely, including the table structure and all the associated constraints, relationships with other tables, and access privileges. TRUNCATE deletes all rows from a table without affecting the table structure and constraints. DROP works slower than TRUNCATE. Both are irreversible DDL (Data Definition Language) commands.
+
+24. What is the difference between the HAVING and WHERE statements?
+            The first one works on aggregated data after they are grouped, while the second one checks each row individually. If both statements are present in a query, they appear in the following order: WHERE – GROUP BY – HAVING. The SQL engine interprets them also in the same order.
+
+25. What is a Primary Key?
+            The PRIMARY KEY constraint uniquely identifies each row in a table. It must contain UNIQUE values and has an implicit NOT NULL constraint. A table in SQL is strictly restricted to have one and only one primary key, which is comprised of single or multiple fields (columns).
+
+26. What is a UNIQUE constraint?
+            A UNIQUE constraint ensures that all values in a column are different. This provides uniqueness for the column(s) and helps identify each row uniquely. Unlike primary key, there can be multiple unique constraints defined per table. The code syntax for UNIQUE is quite similar to that of PRIMARY KEY and can be used interchangeably.
+
+27. What is a Foreign Key?
+            A FOREIGN KEY comprises of single or collection of fields in a table that essentially refers to the PRIMARY KEY in another table. Foreign key constraint ensures referential integrity in the relation between two tables.
+
+28. What is a Join? List its different types.
       The SQL Join clause is used to combine records (rows) from two or more tables in a SQL database based on a related column between the two.
-       here are six different types of JOINs in SQL:
-              (INNER) JOIN: Retrieves records that have matching values in both tables involved in the join. This is the widely used join for queries.
-                      SELECT *
-                      FROM Table_A
-                      JOIN Table_B;
-                      SELECT *
-                      FROM Table_A
-                      INNER JOIN Table_B;
-              LEFT (OUTER) JOIN: Retrieves all the records/rows from the left and the matched records/rows from the right table.
-                      SELECT *
-                      FROM Table_A A
-                      LEFT JOIN Table_B B
-                      ON A.col = B.col;
-              RIGHT (OUTER) JOIN: Retrieves all the records/rows from the right and the matched records/rows from the left table.
-                      SELECT *
-                      FROM Table_A A
-                      RIGHT JOIN Table_B B
-                      ON A.col = B.col;
-              FULL (OUTER) JOIN: Retrieves all the records where there is a match in either the left or right table.
-                      SELECT *
-                      FROM Table_A A
-                      FULL JOIN Table_B B
-                      ON A.col = B.col;
-             Self-Join : A self JOIN is a case of regular join where a table is joined to itself based on some relation between its own column(s). Self-join uses the INNER JOIN or LEFT JOIN clause and a table alias is used to assign different names to the table within the query.
-                      SELECT A.emp_id AS "Emp_ID",A.emp_name AS "Employee",
-                      B.emp_id AS "Sup_ID",B.emp_name AS "Supervisor"
-                      FROM employee A, employee B
-                      WHERE A.emp_sup = B.emp_id;
-              Cross-Join : Cross join can be defined as a cartesian product of the two tables included in the join. The table after join contains the same number of rows as in the cross-product of the number of rows in the two tables. If a WHERE clause is used in cross join then the query will work like an INNER JOIN.
-                      SELECT stu.name, sub.subject 
-                      FROM students AS stu
-                      CROSS JOIN subjects AS sub;
-What is an Index? Explain its different types.
-      A database index is a data structure that provides a quick lookup of data in a column or columns of a table. It enhances the speed of operations accessing data from a database table at the cost of additional writes and memory to maintain the index data structure.
-        CREATE INDEX index_name   /* Create Index */
-        ON table_name (column_1, column_2);
-        DROP INDEX index_name;   /* Drop Index */
-There are different types of indexes that can be created for different purposes:
-      Unique and Non-Unique Index:
-      Unique indexes are indexes that help maintain data integrity by ensuring that no two rows of data in a table have identical key values. Once a unique index has been defined for a table, uniqueness is enforced whenever keys are added or changed within the index.
-      CREATE UNIQUE INDEX myIndex
-      ON students (enroll_no);
-      Non-unique indexes, on the other hand, are not used to enforce constraints on the tables with which they are associated. Instead, non-unique indexes are used solely to improve query performance by maintaining a sorted order of data values that are used frequently.
-      Clustered and Non-Clustered Index:
-    --> Clustered indexes are indexes whose order of the rows in the database corresponds to the order of the rows in the index. This is why only one clustered index can exist in a given table, whereas, multiple non-clustered indexes can exist in the table.
-    --> The only difference between clustered and non-clustered indexes is that the database manager attempts to keep the data in the database in the same order as the corresponding keys appear in the clustered index.
-    --> Clustering indexes can improve the performance of most query operations because they provide a linear-access path to data stored in the database.
-What is the difference between Clustered and Non-clustered index?
+             here are six different types of JOINs in SQL:
+                    (INNER) JOIN: Retrieves records that have matching values in both tables involved in the join. This is the widely used join for queries.
+                            SELECT *
+                            FROM Table_A
+                            JOIN Table_B;
+                            SELECT *
+                            FROM Table_A
+                            INNER JOIN Table_B;
+                    LEFT (OUTER) JOIN: Retrieves all the records/rows from the left and the matched records/rows from the right table.
+                            SELECT *
+                            FROM Table_A A
+                            LEFT JOIN Table_B B
+                            ON A.col = B.col;
+                    RIGHT (OUTER) JOIN: Retrieves all the records/rows from the right and the matched records/rows from the left table.
+                            SELECT *
+                            FROM Table_A A
+                            RIGHT JOIN Table_B B
+                            ON A.col = B.col;
+                    FULL (OUTER) JOIN: Retrieves all the records where there is a match in either the left or right table.
+                            SELECT *
+                            FROM Table_A A
+                            FULL JOIN Table_B B
+                            ON A.col = B.col;
+                   Self-Join : A self JOIN is a case of regular join where a table is joined to itself based on some relation between its own column(s). Self-join uses the INNER JOIN or LEFT JOIN clause and a table alias is used to assign different names to the table within the query.
+                            SELECT A.emp_id AS "Emp_ID",A.emp_name AS "Employee",
+                            B.emp_id AS "Sup_ID",B.emp_name AS "Supervisor"
+                            FROM employee A, employee B
+                            WHERE A.emp_sup = B.emp_id;
+                    Cross-Join : Cross join can be defined as a cartesian product of the two tables included in the join. The table after join contains the same number of rows as in the cross-product of the number of rows in the two tables. If a WHERE clause is used in cross join then the query will work like an INNER JOIN.
+                            SELECT stu.name, sub.subject 
+                            FROM students AS stu
+                            CROSS JOIN subjects AS sub;
+
+29. What Is a Window Function in SQL?
+      --> Window functions are SQL functions that operate on a set of records called the “window” or the “window frame”. The “window”  is a set of rows that are somehow related to the row currently being processed by the query (e.g. all rows before the current row, 5 rows before the current row, or 3 rows after the current row).
+      --> Window functions are similar to aggregate functions in that they compute statistics for a group of rows. However, window functions do not collapse rows; they keep the details of individual rows.
+      --> Window functions can be organized into the following four categories: 
+            aggregate functions, 
+                  COUNT() counts the number of rows within the window.
+                  AVG() calculates the average value for a given column for all the records in the window.
+                  MAX() obtains the maximum value of a column for all the records in the window.
+                  SUM() returns the sum of all values in a given column within the window.
+            ranking functions, 
+                  ROW_NUMBER() returns the position of the row in the result set.
+                  RANK() ranks rows based on a given value. When two rows are in the same position, it awards them the same rank and leaves the next position empty (e.g. 1, 2, 3, 3, 5...).
+                  DENSE_RANK() also ranks rows by a given value, but it does not leave the next position empty (e.g. 1, 2, 3, 3, 4, 5...).
+            analytic functions
+                  LEAD(),
+                  LAG() 
+                  FIRST_VALUE()
+                  last_value()
+                  nth_value()
+            distribution functions.
+                  PERCENT_RANK()
+                  CUME_DIST()
+                  NTile()
+
+30. Difference between row_number(),rank() and dense_rank()
+            When there is duplicates-
+                  →Different row_number is assigned for each row and therefore, it doesn’t add any value when there is duplicates
+                  →Same rank is assigned and for next record, it skip next ranking in between.
+                  →Same dense_rank is assigned and for next record, it doesn’t skip next ranking in between.
+            Similarity between row_number(),rank() and dense_rank()
+                  When there is no duplicates, all row number() ,rank() and dense_rank() leads to same result.
+
+31. What is an Index? Explain its different types.
+            A database index is a data structure that provides a quick lookup of data in a column or columns of a table. It enhances the speed of operations accessing data from a database table at the cost of additional writes and memory to maintain the index data structure.
+              CREATE INDEX index_name   /* Create Index */
+              ON table_name (column_1, column_2);
+              DROP INDEX index_name;   /* Drop Index */
+            There are different types of indexes that can be created for different purposes:
+                  Unique and Non-Unique Index:
+                  Unique indexes are indexes that help maintain data integrity by ensuring that no two rows of data in a table have identical key values. Once a unique index has been defined for a table, uniqueness is enforced whenever keys are added or changed within the index.
+                  CREATE UNIQUE INDEX myIndex
+                  ON students (enroll_no);
+                  Non-unique indexes, on the other hand, are not used to enforce constraints on the tables with which they are associated. Instead, non-unique indexes are used solely to improve query performance by maintaining a sorted order of data values that are used frequently.
+                  Clustered and Non-Clustered Index:
+                --> Clustered indexes are indexes whose order of the rows in the database corresponds to the order of the rows in the index. This is why only one clustered index can exist in a given table, whereas, multiple non-clustered indexes can exist in the table.
+                --> The only difference between clustered and non-clustered indexes is that the database manager attempts to keep the data in the database in the same order as the corresponding keys appear in the clustered index.
+                --> Clustering indexes can improve the performance of most query operations because they provide a linear-access path to data stored in the database.
+
+32. What is the difference between Clustered and Non-clustered index?
           As explained above, the differences can be broken down into three small factors -
-        -->  Clustered index modifies the way records are stored in a database based on the indexed column. A non-clustered index creates a separate entity within the table which references the original table.
-              Clustered index is used for easy and speedy retrieval of data from the database, whereas, fetching records from the non-clustered index is relatively slower.
-              In SQL, a table can have a single clustered index whereas it can have multiple non-clustered indexes.
-What is Data Integrity?
-  Ans : Data Integrity is the assurance of accuracy and consistency of data over its entire life-cycle and is a critical aspect of the design, implementation, and usage of any system which stores, processes, or retrieves data. It also defines integrity constraints to enforce business rules on the data when it is entered into an application or a database.
-What are UNION, MINUS and INTERSECT commands?
-      The UNION operator combines and returns the result-set retrieved by two or more SELECT statements.
-      The MINUS operator in SQL is used to remove duplicates from the result-set obtained by the second SELECT query from the result-set obtained by the first SELECT query and then return the filtered results from the first.
-      The INTERSECT clause in SQL combines the result-set fetched by the two SELECT statements where records from one match the other and then returns this intersection of result-sets.
-Certain conditions need to be met before executing either of the above statements in SQL -
-      Each SELECT statement within the clause must have the same number of columns
-      The columns must also have similar data types
-      The columns in each SELECT statement should necessarily have the same order
-      SELECT name FROM Students   /* Fetch the union of queries */
-      UNION
-      SELECT name FROM Contacts;
-      SELECT name FROM Students   /* Fetch the union of queries with duplicates*/
-      UNION ALL
-      SELECT name FROM Contacts;
-      SELECT name FROM Students   /* Fetch names from students */
-      MINUS     /* that aren't present in contacts */
-      SELECT name FROM Contacts;
-      SELECT name FROM Students   /* Fetch names from students */
-      INTERSECT    /* that are present in contacts as well */
-      SELECT name FROM Contacts;
-      Write a SQL query to fetch "names" that are present in either table "accounts" or in table "registry".
-      Write a SQL query to fetch "names" that are present in "accounts" but not in table "registry".
-      Write a SQL query to fetch "names" from table "contacts" that are neither present in "accounts.name" nor in "registry.name".
-Order of Execution of SQL sattements ?
-    -- > firstly check the syntax correction
-    From --> Join --> Where --> Group By --> Having --> Select(Here what ever operations we have those will run like DISTINCT, Columns, Agg functions) --> Order By --> Limit/Top 
-What is a Temporary SQL Table?
-      A temporary SQL table, also known as a temp table, is a table that is created and used within the context of a specific session or transaction in a database management system. It is designed to store temporary data that is needed for a short duration and does not require a permanent storage solution.
-Temporary Tables in SQL Server 
-      Temporary tables provide temporary data storage in exact form of original tables for quick access of data. Temporary tables are stored in TempDB. They work like a regular table in that you can perform the operations select, insert and delete as for a regular table. If created inside a stored procedure, they are destroyed upon completion of the stored procedure.
-What are types of temporary tables in SQL Server?
-      There are two types of temporary tables; one is local and the other is global.
-      Local Temporary Tables
-            Local temporary tables are the tables stored in tempdb. Local temporary tables are temporary tables that are available only to the session that created them. These tables are automatically destroyed at the termination of the procedure or session. They are specified with the prefix #, for example, #table_name, and these temp tables can be created with the same name in multiple windows.
-                  Creating a local temporary table
-                        create table #table_name
-                        (
-                        column_name varchar(20),
-                        column_no int
-                        )
-      Global Temporary Tables
-      Global temporary tables are also stored in tempdb. Global temporary tables are temporary tables that are available to all sessions and all users. They have dropped automatically when the last session using the temporary table has been completed. They are specified with the prefix #, for example, ##table_name.
-            Creating Global Temporary Table
-                        create table ##GlobalTemporaryTable
-                        (
-                        column_name varchar(20),
-                        column_no int
-                        )
-      Both tables are stored in the tempdb system database.
-Where is the temporary table stored in SQL Server?
-      Temporary tables are stored inside the Temporary Folder of TempDB. Whenever we create a temporary table, it goes to the Temporary folder of the tempdb database. tempdb -> temporary tables.
-What is the difference between a temp table and a regular table? 
-      Difference between Temporary Tables VS Regular Table
-      A Temporary table differs in the following two ways from regular tables:
-      Each temporary table is implicitly dropped by the system.
-      Each temporary table is stored in the tempdb system database. The table variable doesn't.
-      How to Drop Temporary Tables in SQL Server?
-      We can use the DROP SQL statement to drop a temp table. 
-Drop Temporary Tables
+              -->Clustered index modifies the way records are stored in a database based on the indexed column. A non-clustered index creates a separate entity within the table which references the original table.
+                    Clustered index is used for easy and speedy retrieval of data from the database, whereas, fetching records from the non-clustered index is relatively slower.
+                    In SQL, a table can have a single clustered index whereas it can have multiple non-clustered indexes.
+
+33. What is Data Integrity?
+        Data Integrity is the assurance of accuracy and consistency of data over its entire life-cycle and is a critical aspect of the design, implementation, and usage of any system which stores, processes, or retrieves data. It also defines integrity constraints to enforce business rules on the data when it is entered into an application or a database.
+
+34. What are UNION, MINUS and INTERSECT commands?
+            The UNION operator combines and returns the result-set retrieved by two or more SELECT statements.
+            The MINUS operator in SQL is used to remove duplicates from the result-set obtained by the second SELECT query from the result-set obtained by the first SELECT query and then return the filtered results from the first.
+            The INTERSECT clause in SQL combines the result-set fetched by the two SELECT statements where records from one match the other and then returns this intersection of result-sets.
+
+35. Certain conditions need to be met before executing either of the above statements in SQL -
+            Each SELECT statement within the clause must have the same number of columns
+            The columns must also have similar data types
+            The columns in each SELECT statement should necessarily have the same order
+            SELECT name FROM Students   /* Fetch the union of queries */
+            UNION
+            SELECT name FROM Contacts;
+            SELECT name FROM Students   /* Fetch the union of queries with duplicates*/
+            UNION ALL
+            SELECT name FROM Contacts;
+            SELECT name FROM Students   /* Fetch names from students */
+            MINUS     /* that aren't present in contacts */
+            SELECT name FROM Contacts;
+            SELECT name FROM Students   /* Fetch names from students */
+            INTERSECT    /* that are present in contacts as well */
+            SELECT name FROM Contacts;
+            Write a SQL query to fetch "names" that are present in either table "accounts" or in table "registry".
+            Write a SQL query to fetch "names" that are present in "accounts" but not in table "registry".
+            Write a SQL query to fetch "names" from table "contacts" that are neither present in "accounts.name" nor in "registry.name".
+
+36. Order of Execution of SQL sattements ?
+          -- > firstly check the syntax correction
+          From --> Join --> Where --> Group By --> Having --> Select(Here what ever operations we have those will run like DISTINCT, Columns, Agg functions) --> Order By --> Limit/Top 
+
+37. What is a Temporary SQL Table?
+            A temporary SQL table, also known as a temp table, is a table that is created and used within the context of a specific session or transaction in a database management system. It is designed to store temporary data that is needed for a short duration and does not require a permanent storage solution.
+
+38. Temporary Tables in SQL Server 
+            Temporary tables provide temporary data storage in exact form of original tables for quick access of data. Temporary tables are stored in TempDB. They work like a regular table in that you can perform the operations select, insert and delete as for a regular table. If created inside a stored procedure, they are destroyed upon completion of the stored procedure.
+
+39. What are types of temporary tables in SQL Server?
+            There are two types of temporary tables; one is local and the other is global.
+            Local Temporary Tables
+                  Local temporary tables are the tables stored in tempdb. Local temporary tables are temporary tables that are available only to the session that created them. These tables are automatically destroyed at the termination of the procedure or session. They are specified with the prefix #, for example, #table_name, and these temp tables can be created with the same name in multiple windows.
+                        Creating a local temporary table
+                              create table #table_name
+                              (
+                              column_name varchar(20),
+                              column_no int
+                              )
+            Global Temporary Tables
+            Global temporary tables are also stored in tempdb. Global temporary tables are temporary tables that are available to all sessions and all users. They have dropped automatically when the last session using the temporary table has been completed. They are specified with the prefix #, for example, ##table_name.
+                  Creating Global Temporary Table
+                              create table ##GlobalTemporaryTable
+                              (
+                              column_name varchar(20),
+                              column_no int
+                              )
+            Both tables are stored in the tempdb system database.
+
+40. Where is the temporary table stored in SQL Server?
+            Temporary tables are stored inside the Temporary Folder of TempDB. Whenever we create a temporary table, it goes to the Temporary folder of the tempdb database. tempdb -> temporary tables.
+
+41. What is the difference between a temp table and a regular table? 
+            Difference between Temporary Tables VS Regular Table
+            A Temporary table differs in the following two ways from regular tables:
+            Each temporary table is implicitly dropped by the system.
+            Each temporary table is stored in the tempdb system database. The table variable doesn't.
+            How to Drop Temporary Tables in SQL Server?
+            We can use the DROP SQL statement to drop a temp table. 
+
+42. Drop Temporary Tables
             We can delete the temporary tables using a DROP TABLE command as follows
             Syntax -->DROP TABLE #table_name1,#table_name2
+43. What are the system data bases we have ?
+            Master: All security related information stored in master database. Like when the user was created and what type of user creating.
+            Model: whenever user is going to create the database the sql server to fetch the mdf file and .log file from model database and apply the same database.
+            Msdb: Msdb database is used by sql server agent for scheduling alerts, jobs and recording operators.
+            Tempdb: All temp tables stored in Tempdb.
+
+44. What is CTE(COMMON TABLE EXPRESSION)
+      	For any operation over temporary result set generally we go for temp tables or table variable. To overcome uses of temp tables use CTE. This is best for query performance.
+                  Common CTE
+                  Recurring CTE
+                  Generally we go for deletion of duplicates and to form hierarchy over the data we use Recurring CTE. 
+                  CTE is used in valued in the statements which are immediately followed by CTE declaration.
+45. Inbuilt Date Functions/ String Functions.
+
+
 Refer below Link : Basic Interview Quetions-- >
       1. https://www.interviewbit.com/sql-interview-questions/#sql
       2. https://www.datacamp.com/blog/top-sql-interview-questions-and-answers-for-beginners-and-intermediate-practitioners
