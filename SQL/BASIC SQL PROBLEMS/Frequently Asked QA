@@ -1,0 +1,459 @@
+FAQS IN SQL
+
+Select those employees who comm is null.
+A. select * from emp where comm is null;
+Select list of managers and corresponding Clerks.
+A. select a.ename "Manager" , b.ename "Clerk" from emp a, emp b where b.mgr= 
+a.empno;
+Select list of employee name with their deptno,dname and loc.
+A. select empno,emp.deptno,dname,loc from emp,dept where emp.deptno= 
+dept.deptno
+Select 2nd maximum salary from emp table.
+A. select max(sal) from emp where sal<(select max(sal) from emp);
+Select 5th maximum salary.
+A. select max(sal) from emp a where 5 =(select count(*) from emp b where a.sal<	b.sal);
+Select Alternate Rows from a table.
+For Odd Rows:
+      A. select * from emp where mod(ascii(substr(rowid,18)),2)=0
+For Even Rows:
+A. select * from emp where mod(ascii(substr(rowid,18)),2)=1
+How do I get a random number in Oracle query.
+A. select dbms_random.random from dual;
+To Select Least ,Greatest Numbers.
+A. select least(1,2) from dual
+select greatest(1,2) from dual
+	select greatest(1.2,2.3) from dual
+	select least(1.2,2.3) from dual
+To Round a number.
+A. select ceil(1208917.97802706) from dual;
+To Truncate a number.
+A. select floor(1208917.97802706) from dual;
+11) Select employees who joined before their manager.
+select a.empno,a.ename from emp a, emp b where a.mgr=b.empno and a.hiredate< b.hiredate;
+To Select Only Characters from a combination of numbers and characters.
+A. select translate 
+('RAGHU40020','ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ') FROM dual;
+To Select Only Numbers from a combination of numbers and characters.
+//26 Empty Spaces
+select translate('RAGHU40020','ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789','                          0123456789') FROM dual;
+
+
+12) To get those employee whose name ends with 'RD' :
+
+	select * from emp where ename like '%RD';   
+
+
+13) To select those , whose last names are a phonetic representation of 'SMYTHE' :
+
+	select * from emp where soundex(ename)=soundex('SMYTHE')
+
+  To select those , whose job is phonetic representation of 'SALESMEN' :
+
+	select * from emp where soundex(job)=soundex('SALESMEN');
+
+14) To display employee details of workers who joined before their managers :
+
+	select a.ename from emp a, emp b where a.mgr=b.empno and a.hiredate<b.hiredate;
+
+15) Display the names of employees whose sal is greater than max sal of sales :
+
+	select * from emp where sal >(select max(sal) from emp , dept where emp.deptno=dept.deptno and dname='SALES');
+
+16)  Display the employee name , who is drawing histet salary :
+
+	select * from emp where sal=(select max(sal) from emp);
+
+17) TO list the employees in deptno =10 with common jobs in depnto=20 :
+
+	select a.ename,a.empno,b.ename,b.empno from emp a , emp b where
+a.job=b.job and a.deptno=10 and b.deptno=20;	
+
+
+18) To list the employees who have both the same job and same salary as SCOTT :
+
+	select * from emp where job=(select job from emp where ename='SCOTT')
+and sal=(select sal from emp where ename='SCOTT') and ename!='SCOTT'
+
+
+19) List the employees who have the same job as SMITH or Sal < Jones in order by job,sal :
+
+	select * from emp where job=(select job from emp where ename='SMITH') or sal <(select sal from emp where ename='JONES')
+order by job,sal
+
+20) Select all employees where ENAME should not begin with A :
+
+	select * from emp where ename not like 'A%';
+
+21) Display last three characters of each employee :
+
+	select ename, substr(ename,-3) from emp;
+
+   From last three characters of name , display first two characters :
+
+	select ename, substr(ename,-3,2) from emp;
+
+22) To Display the names of employees whose name have two A's in their name :
+
+	select * from emp where ename like 'A%A' or ename like '%AA%' or ename like '%A%A%';
+
+23) List the details of employees whose sal is greater than average sal :
+	
+	select * from emp where sal >(select avg(sal) from emp);
+
+24) Select Minium, Maxium, Average Salaries Department wise :
+
+	select min(sal),max(sal),avg(sal),deptno from emp group by deptno;
+
+25) Display the number of employees in each department :
+
+	select count(*),deptno from emp group by deptno;
+
+26) List the average sal for all employees :
+
+	select avg(sal) from emp;
+
+27) Display all employees whose department is 10 :
+
+	select * from emp where deptno=10;
+
+28) Display all employees whose sal lie between 2000 and 5000 :
+
+	select * from emp where deptno=10;
+	
+29) Display names of all employees whose name starts with letter 'S' :
+
+	select * from emp where ename like 'S%';
+
+30) List names of all employees whose name have more than FIVE letters :
+
+	select * from emp where ename like '%_____%';
+
+31) Display the names of employees whose name have only four letters :
+
+	select * from emp where ename like '____';
+
+32) To select Day from a date :
+
+	For day  :
+	select to_char(hiredate,'dd') from emp;
+	For Week :
+	select to_char(hiredate,'day') from emp;
+
+33) To select Month from a date :
+
+	For Month in Number :
+	select to_char(hiredate,'mm') from emp
+
+	For Month in Characters :
+	select to_char(hiredate,'mon') from emp
+
+34) To select Year from a date :
+
+	select to_char(hiredate,'yy') from emp
+	select to_char(hiredate,'yyyy') from emp
+
+
+35) Display details of employees who joined in February :
+
+	select * from emp where to_char(hiredate,'mm')=2;
+
+	select * from emp where hiredate like '%FEB%';
+
+36) List the details of employees who joined after 1st December 1980 and before 1st December 1981 :
+
+	select * from emp where hiredate between to_date('01-12-1980','dd-mm-yyyy') and to_date('01-12-1981','dd-mm-yyyy')
+
+37) List the details of employees who earn more than 2000 and doesnot enjoy any comm :
+
+	select * from emp where sal > 2000 and comm is null;
+
+38) List the details of employees who joined before 20th of any month and year except 1981 :
+
+	select * from emp where to_char(hiredate,'dd') < 20 and to_char(hiredate,'yyyy') != 	1981
+
+39) List the deatils of employees who enjoy comm more than 250 :
+	
+	 select * from emp where comm >250;
+
+40)  List the sum of Sal and Comm (Assume , if comm is null , then comm = 0 ) :
+
+	select sal,comm,sal+nvl(comm,0) from emp;
+
+	(Assume , if comm is null , then comm = 100 ) :
+
+	select sal,comm,sal+nvl(comm,100) from emp;
+
+41) List the department name and location for emplyoees who earn more than 1500 :
+
+	select a.ename,b.deptno,dname,loc,sal from emp a,dept b where
+a.deptno=b.deptno and a.sal >1500
+
+42) Select Last three characters of each employee :
+
+	select ename,substr(ename,-3,3) from emp;
+
+43) Display the employee id , employee name and their salaries Prefix with Dollar sign in
+decending order :
+
+	column sal format $99,990
+	select sal from emp;
+
+44) Display Job ( Replacing 'SALESMAN' with 'SALESPERSON' ) of employees :
+
+	select job,decode(job,'SALESMAN','SALESPERSON',job) FROM emp
+
+45) Display deptname , in which no employee has been recruited :
+
+	select deptno,dname,loc from dept where deptno=(select deptno from dept minus select distinct deptno from emp);
+
+46) In which year maximum employee were recruited :
+	
+	select to_char(hiredate,'yy') from emp having count(*)
+=(select max(count(*)) from emp group by to_char(hiredate,'yy')) group by to_char(hiredate,'yy')
+
+47) Display departments which has more than 3 employees :
+
+	select deptno from emp having count(*) >3 group by deptno;
+
+48) List out number of clerks and number of managers :
+
+	select count(*), job from emp where job='CLERK' or job='MANAGER' group by job;
+
+49) List most experienced employee :
+
+	select * from emp where hiredate=(select min(hiredate) from emp);
+
+50) List employees who celebrate their birthday in current month :
+
+	select * from emp where to_char(hiredate,'mm')=to_char(sysdate,'mm');
+
+51) Display the details of employees completing 20 years of service :
+
+	select * from emp where months_between(sysdate,hiredate) > 240;
+
+	Here , 240 months means 20 years  
+
+52) Display the details of employees who have joined before BLAKE :
+
+	select * from emp where hiredate < ( select hiredate from emp where ename='BLAKE');
+
+53) Display sal of employees with information :
+	Greater , if sal > 1500
+	Lesser  , if sal < 1500
+	Equal   , if sal = 1500
+	
+	
+	select sal, decode(sign(sal-1500),1,'Greater',-1,'Lesser','Equal') from emp;
+
+54) Display number of employees joined in year 81 :
+
+	select count(*) from emp where to_char(hiredate,'yy') = 81;
+
+55) Display all employees who joined before 28-sep-81 :
+
+	select * from emp where to_date(hiredate,'dd-mon-yy') < to_date('28-sep-81','dd-mon-yy');
+
+56) Display all employees who joined after 09-jun-81 :
+
+	select * from emp where to_date(hiredate,'dd-mon-yy') > to_date('09-jun-81','dd-mon-yy');
+
+57) To get a equalent Character for a ASCII value :
+
+	select chr(67) from dual;
+
+58) To get a ASCII value for a character :
+	
+	 select ascii('C') from dual;
+
+59) Display the list who joined between 20-feb-81 and 03-dec-81 :
+
+	  select * from emp where to_date(hiredate,'dd-mon-yy') between to_date('20-feb-81','dd-mon-yy') and to_date('03-dec-81','dd-mon-yy');
+
+60) Select number of managers :
+
+	select count(*) from emp where job='MANAGER';
+
+61) List the number of employees in each dept :
+
+	select count(*),deptno from emp group by deptno;
+
+62) List the employees , who are earning same salary :
+
+	select a.ename,b.ename from emp a , emp b where a.deptno=b.deptno and a.sal=b.sal and a.empno!=b.empno;
+
+63) Display the first five rows :
+
+	 select * from emp where rownum<6;
+
+64) Display details about 5th employee :
+
+	select * from emp where rownum < 6 minus select * from emp where rownum < 5;
+
+65) List out the details of those employees whose salary is greter than the average salary of their dept :
+	
+
+
+
+
+66) List the last five employees  from emp :
+
+	select * from emp minus select * from emp where rownum < 10;
+
+67) Write a query to increment basic salary (salary + comm) by 10% for those employees whose
+basic salary is less than 1000 and 20% :
+
+	select sal,decode(sal,sal,(sal+0.1*sal+nvl(comm,0))) from emp where sal <=1000
+	union
+	select sal,decode(sal,sal,(sal+0.2*sal+nvl(comm,0))) from emp where sal >=1000	
+
+68) Display the top 3 salaries from emp table :
+
+	
+
+
+
+69) Display experience of each employee :
+
+	select months_between(sysdate,hiredate) from emp;
+
+70) Display most expereiced employee :
+
+
+
+71) Display the list of employees , number of employees joined in each year :
+
+	select count(*), to_char(hiredate,'yyyy') from emp group by to_char(hiredate,'yyyy');
+
+72) Dislpaly the year in which , maximum employees recruited :
+
+	select to_char(hiredate,'yy') from emp having count(*)=(select max(count(*)) from emp group by to_char(hiredate,'yy') )  group by to_char(hiredate,'yy');
+
+73) TRUNC :
+
+	select trunc(15.7) from dual;		output --> 15
+	select trunc(15.4) from dual;		output --> 15
+	select trunc(15.678,2) from dual;	output --> 15.67
+	select trunc(15.678,1) from dual;	output --> 15.6
+
+	select trunc(15.678,-1) from dual;	output --> 10
+	select trunc(15.678,-2) from dual;	output --> 0
+	select trunc(115.678,-2) from dual;	output --> 100
+	select trunc(115.678,-3) from dual;	output --> 0
+
+74) ROUND :
+
+	select round(15.7) from dual;		output --> 16
+	select round(15.4) from dual;		output --> 15
+	select round(115.5,-1) from dual;	output --> 120
+	select round(115.5,-2) from dual;	output --> 100
+
+75) MOD :
+	
+	select mod(99,4) from dual;		output --> 3
+
+76) Operators :
+
+	select 5/2 from dual;			output --> 2.5
+	select 5*3 from dual;			output --> 15
+	select 5+3 from dual;			output --> 8
+	select 5-3 from dual;			output --> 2
+
+77) FLOOR :
+
+	select floor(3.4) from dual;		output --> 3
+	select floor(3.7) from dual;		output --> 3
+
+78) CEIL :
+
+	select ceil(3.4) from dual;		output -->4
+	select ceil(3.7) from dual;		output -->4
+
+79) SUBSTR :
+
+	select ename,substr(ename,1,3) from emp;
+	select ename,substr(ename,-3,3) from emp;
+
+80 ) TRANSLATE :
+
+	select translate('RAGHU40020','ABCDEFGHIJKLMNOPQRSTUVWXYZ012345789',
+'ABCDEFGHIJKLMNOPQRSTUVWXYZ') from dual;
+
+	select translate('RAGHU40020','ABCDEFGHIJKLMNOPQRSTUVWXYZ012345789',
+'                          0123456789') from dual
+
+81) INSTR :
+
+	It used to search the place of a substring in a string.
+
+	select instr('RAGHU','G',1) from dual;		output --> 3
+
+	select instr('RAGHU','GH',1) from dual;		output --> 3
+
+	select instr('RAGHU','GU',1) from dual;		output --> 0
+
+82) Arthmatic Fuction :
+	
+	sin,sinh,cos,cosh,tan,tanh etc..
+
+	select sin(A) from dual;	NOTE :	A should be in Radians
+	select sin(30) from dual;	output --> -.98803162		
+
+	select exp(2) from dual;	output --> 7.3890561
+	
+	select log(100,10) from dual;	output --> 0.5
+		LOG takes two arguments.
+
+	select ln(10) from dual;	output --> 2.30258509
+	
+	POWER :
+
+		To raise one number to the power of another , use power. In this function 		the first argument is raised to the power of second argument.
+
+		select power(2,3) from dual;	output --> 8
+		select power(-2,3) from dual;	output --> -8
+		select power(2,-3) from dual;	output --> 0.125
+		select power(-2,-3) from dual;	output --> -0.125
+
+83) SIGN :
+
+	Sign returns 1 if its argument is greater than zero, -1 if its argument is lesser than zero , 0 if its argument is equal to zero.
+
+	select sign(10-2) from dual;		output --> 1
+	select sign(2-10) from dual;		output --> -1
+	select sign(3-3) from dual;		output --> 0
+
+84) SQRT :
+
+	select sqrt(16) from dual;		output --> 4
+
+85) LPAD,RPAD :
+
+	select lpad('Raghu',4) from dual;	output --> Ragh
+	select lpad('Raghu',2) from dual;	output --> Ra
+	select lpad('Raghu',1) from dual;	output --> R
+
+	select rpad('Raghu',2) from dual;	output --> Ra
+	select rpad('Raghu',4) from dual;	output --> Ragh
+		
+
+
+		
+
+		
+
+	
+	
+
+	
+	
+	
+
+
+		
+
+		
+
+		
+	
+	
+		
