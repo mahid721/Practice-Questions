@@ -1,0 +1,346 @@
+-------------------------------------------------------------
+
+Roadmap for becoming an Azure Data Engineer in 2024:
+
+𝟭 - 𝗔𝘇𝘂𝗿𝗲 𝗖𝗹𝗼𝘂𝗱 𝗖𝗼𝗻𝗰𝗲𝗽𝘁: Knowing the cloud concept is a must to have skills in today's time for any profile.
+
+𝗟𝗲𝗮𝗿𝗻 Azure Basics 𝗟𝗶𝘃𝗲 for 𝗙𝗿𝗲𝗲 here: https://lnkd.in/dq_8G2QT
+
+𝟮 - 𝗕𝗮𝘀𝗶𝗰𝘀 𝗼𝗳 𝗽𝘆𝘁𝗵𝗼𝗻: It is good to know at least essential of python if you are planning to become an azure data engineer
+
+𝗟𝗲𝗮𝗿𝗻 python 𝗟𝗶𝘃𝗲 for 𝗙𝗿𝗲𝗲: 
+https://lnkd.in/dHKKXsUb
+
+𝟯-𝗦𝗤𝗟: One of the most essential prerequisites for any data profile.
+
+Learn SQL for 𝗙𝗿𝗲𝗲 from here: https://lnkd.in/dmTTBQri
+
+
+𝟰- 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗙𝗮𝗰𝘁𝗼𝗿𝘆: It is one the most commonly used orchestration tool as an Azure Data Engineer
+
+Learn Azure Data Factory From here: https://adeus.azurelib.com
+
+𝟱- 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮𝗯𝗿𝗶𝗰𝗸𝘀 / 𝗦𝗽𝗮𝗿𝗸/ 𝗽𝘆𝗦𝗽𝗮𝗿𝗸 : It is powerful and one of the most important pieces in becoming a Data engineer needed for Big data analytics
+
+Learn Azure Databricks / Spark/pyspark from here: https://adeus.azurelib.com
+
+𝟲- 𝗔𝘇𝘂𝗿𝗲 𝗦𝘆𝗻𝗮𝗽𝘀𝗲 𝗔𝗻𝗮𝗹𝘆𝘁𝗶𝗰𝘀: New buzzword in the azure data engineering world, a common workspace for data pipeline, data warehouse, and spark analytics.
+
+Learn Azure Synapse Analytics from here: https://adeus.azurelib.com
+
+𝟳- 𝗔𝘇𝘂𝗿𝗲 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝘀, 𝗟𝗼𝗴𝗶𝗰 𝗔𝗽𝗽𝘀, 𝗔𝘇𝘂𝗿𝗲 𝗦𝘁𝗼𝗿𝗮𝗴𝗲, 𝗞𝗲𝘆 𝗩𝗮𝘂𝗹𝘁: Utility services are very handy for day-to-day work as a data engineer.
+
+Learn Azure Functions, Logic Apps, Azure Storage, Key Vault, Fabric & dimensional modeling from here: https://adeus.azurelib.com
+
+𝟴- 𝗘𝗻𝗱 𝘁𝗼 𝗘𝗻𝗱 𝗣𝗿𝗼𝗷𝗲𝗰𝘁: Highly recommended to do at least 3 end to end real-world project implementations to master the concept learned:
+
+Get Real-world End-to-End Project from here: https://adeus.azurelib.com
+
+𝟵- 𝗦𝗻𝗼𝘄𝗳𝗹𝗮𝗸𝗲: It is good to have skills as an Azure data engineer but not mandatory. Snowflake is getting a lot of popularity as a cloud data warehouse and analytics solution.
+
+Learn Snowflake from here: snowflake.azurelib.com
+
+𝟭𝟬- 𝗥𝗲𝘀𝘂𝗺𝗲 𝗣𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻 𝗧𝗲𝗺𝗽𝗹𝗮𝘁𝗲 : Stop wasting time on resume preparation get data engineer
+
+Resume template for 𝗙𝗿𝗲𝗲: 
+https://lnkd.in/d4gxV8Ni
+
+𝟭𝟭- 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻: 
+
+Prepare for Interview: https://adeus.azurelib.com
+
+𝗦𝘂𝗺𝗺𝗮𝗿𝘆:
+
+- SQL
+- Basic python
+- Cloud Fundamental
+- ADF
+- Databricks/Spark
+- Azure Synapse
+- Azure Functions, Logic Apps, Azure Storage, Key Vault
+- Dimensional Modelling 
+- Azure Fabric
+- 3 End-to-End Project
+- Snowflake (Optional)
+- Resume Preparation
+- Interview Prep
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Are you looking for change your career to Data Engineering?
+
+Day 1✨✨✨✨✨:
+
+Frameworks come and go. SQL stays.
+
+Data Engineers can relate to this.
+
+𝗦𝗼, 𝗵𝗲𝗿𝗲 𝗶𝘀 𝘁𝗵𝗲 𝘄𝗲𝗲𝗸 𝘄𝗶𝘀𝗲 𝗽𝗹𝗮𝗻 𝘁𝗼 𝗹𝗲𝗮𝗿𝗻 𝗦𝗤𝗟
+
+𝗪𝗲𝗲𝗸 𝟭: Learn Basic SQL - https://lnkd.in/dFcP-X6N 
+
+𝗪𝗲𝗲𝗸 𝟮: Advanced SQL - https://lnkd.in/dPPpttHg
+
+Basic and Advanced SQL videos are from Sumit Mittal YT channel.
+
+𝗪𝗲𝗲𝗸 𝟯: Start practicing interview questions - https://lnkd.in/dWCVfXsA
+
+Ankit Bansal YT channel has around 100+ frequently asked interview questions
+
+Try to solve 2-3 problems a day, consistency is the key!!
+
+𝗪𝗲𝗲𝗸 𝟰: LeetCode has around 50+ Basic to Hard level questions.
+
+𝗪𝗲𝗲𝗸 𝟱: sqlbolt has around 35+ Easy to Hard level questions.
+
+𝗪𝗲𝗲𝗸 𝟲: DataLemur 🐒 (Ace the SQL & Data Interview) r has around 50+ interview questions asked in top product based companies.]
+
+𝗕𝗮𝘀𝗶𝗰 𝗦𝗤𝗟 --> 𝗔𝗱𝘃𝗮𝗻𝗰𝗲𝗱 𝗦𝗤𝗟 --> 𝟮𝟱𝟬+ 𝗦𝗤𝗟 𝗽𝗿𝗼𝗯𝗹𝗲𝗺𝘀
+
+———————————————————————
+
+𝟰 𝗚𝗿𝗲𝗮𝘁 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗰𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝘆𝗼𝘂 𝗰𝗮𝗻 𝗳𝗼𝗹𝗹𝗼𝘄- 
+
+👉 Zach Wilson - https://lnkd.in/gA6anvuw
+👉 Darshil Parmar - https://lnkd.in/gTNfCYT8
+👉 Benjamin Rogojan - https://lnkd.in/gRfjHaDJ
+👉 Shashank Mishra 🇮🇳 - https://lnkd.in/gfUrr6zt
+
+𝗜𝗳 𝘆𝗼𝘂 𝗻𝗲𝗲𝗱 𝗚𝘂𝗶𝗱𝗮𝗻𝗰𝗲, 𝘁𝗵𝗲𝗻 𝗗𝗠. 𝗜 𝘄𝗶𝗹𝗹 𝗰𝗼𝗻𝗻𝗲𝗰𝘁 𝘄𝗶𝘁𝗵 𝘆𝗼𝘂 𝗮𝗻𝗱 𝗜 𝘄𝗶𝗹𝗹 𝘀𝗵𝗮𝗿𝗲 𝗘𝗔𝗖𝗛 & 𝗘𝗩𝗘𝗥𝗬𝗧𝗛𝗜𝗡𝗚 𝗮𝗯𝗼𝘂𝘁 𝗯𝗲𝗹𝗼𝘄 𝘁𝗼𝗽𝗶𝗰𝘀 👇🏻 
+
+✅ 𝗥𝗼𝗮𝗱𝗺𝗮𝗽
+✅ 𝗧𝘆𝗽𝗲𝘀 𝗼𝗳 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗿𝗼𝘂𝗻𝗱𝘀 𝗳𝗼𝗿 𝗯𝗼𝘁𝗵 𝗦𝗲𝗿𝘃𝗶𝗰𝗲 & 𝗣𝗿𝗼𝗱𝘂𝗰𝘁 
+✅ 𝗞𝗲𝘆 𝘁𝗼𝗽𝗶𝗰𝘀 𝘁𝗼 𝗳𝗼𝗰𝘂𝘀 𝗼𝗻 𝗱𝘂𝗿𝗶𝗻𝗴 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄𝘀 
+✅ 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗮𝗻𝗱 𝗽𝗶𝗽𝗲𝗹𝗶𝗻𝗲 𝗱𝗲𝘀𝗶𝗴𝗻 𝗿𝗲𝗹𝗮𝘁𝗲𝗱 𝗾𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀
+✅ 𝗣𝗿𝗼𝗷𝗲𝗰𝘁 𝗿𝗲𝗹𝗮𝘁𝗲𝗱 𝗱𝗶𝘀𝗰𝘂𝘀𝘀𝗶𝗼𝗻𝘀
+✅ 𝗕𝗲𝗵𝗮𝘃𝗶𝗼𝘂𝗿𝗮𝗹 𝗶𝗻𝘀𝗶𝗴𝗵𝘁𝘀 𝗮𝗻𝗱 𝘄𝗵𝗮𝘁 𝗵𝗶𝗿𝗶𝗻𝗴 𝗺𝗮𝗻𝗮𝗴𝗲𝗿𝘀 𝗿𝗲𝗮𝗹𝗹𝘆 𝗹𝗼𝗼𝗸 𝗳𝗼𝗿
+
+𝗡𝗢𝗧𝗘 : 𝗜’𝗺 𝗻𝗼𝘁 𝗰𝗵𝗮𝗿𝗴𝗶𝗻𝗴 𝗮𝗻𝘆𝘁𝗵𝗶𝗻𝗴 𝗳𝗼𝗿 𝘁𝗵𝗶𝘀. 𝗜 𝗷𝘂𝘀𝘁 𝘄𝗮𝗻𝘁 𝘁𝗼 𝗵𝗲𝗹𝗽 𝘆𝗼𝘂❤️.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+-----------------------------  Unit Testing -----------------------------------
+
+𝐔𝐧𝐢𝐭 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 𝐨𝐟 𝐩𝐢𝐩𝐞𝐥𝐢𝐧𝐞𝐬 𝐢𝐧 𝐃𝐚𝐭𝐚 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠:
+
+Today, let's dive into the world of unit testing for data pipelines, why it's crucial, and how you can implement it using Spark DataFrames. 
+
+𝐖𝐡𝐚𝐭 𝐚𝐫𝐞 𝐔𝐧𝐢𝐭 𝐓𝐞𝐬𝐭𝐬 𝐟𝐨𝐫 𝐃𝐚𝐭𝐚 𝐏𝐢𝐩𝐞𝐥𝐢𝐧𝐞𝐬?
+Unit tests are automated tests written and run by software developers to ensure that a section of an application (known as the "unit") meets its design and behaves as intended. In the context of data pipelines, unit testing involves verifying individual components of the data processing workflow, such as transformations, data integrations, and the output of SQL queries.
+
+𝐖𝐡𝐲 𝐚𝐫𝐞 𝐔𝐧𝐢𝐭 𝐓𝐞𝐬𝐭𝐬 𝐈𝐦𝐩𝐨𝐫𝐭𝐚𝐧𝐭?
+𝐂𝐚𝐭𝐜𝐡 𝐁𝐮𝐠𝐬 𝐄𝐚𝐫𝐥𝐲: Testing each component separately helps identify errors early in the development cycle, saving time and effort in later stages.
+
+𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭𝐚𝐭𝐢𝐨𝐧: Tests act as documentation for your code. They help new developers understand the pipeline's functionalities without digging deep into the code.
+
+𝐑𝐞𝐟𝐚𝐜𝐭𝐨𝐫𝐢𝐧𝐠 𝐂𝐨𝐧𝐟𝐢𝐝𝐞𝐧𝐜𝐞: With a good set of tests, developers can refactor code more confidently, ensuring that changes do not break existing functionality.
+
+𝐈𝐦𝐩𝐫𝐨𝐯𝐞 𝐂𝐨𝐝𝐞 𝐐𝐮𝐚𝐥𝐢𝐭𝐲: Regular testing ensures that the code meets all specified requirements and adheres to quality standards.
+
+𝐒𝐚𝐦𝐩𝐥𝐞 𝐔𝐧𝐢𝐭 𝐓𝐞𝐬𝐭 𝐂𝐚𝐬𝐞𝐬:
+
+1. 𝐓𝐞𝐬𝐭 𝐃𝐚𝐭𝐚 𝐂𝐨𝐦𝐩𝐥𝐞𝐭𝐞𝐧𝐞𝐬𝐬:
+def test_data_completeness(df):
+ assert df.count() > 0, "DataFrame is empty"
+
+2. 𝐓𝐞𝐬𝐭 𝐒𝐜𝐡𝐞𝐦𝐚 𝐂𝐨𝐦𝐩𝐥𝐢𝐚𝐧𝐜𝐞:
+def test_schema_compliance(df):
+ expected_columns = ['client_id', 'company_name', 'url', ...]
+ assert set(df.columns) == set(expected_columns), "Schema mismatch"
+
+3. 𝐓𝐞𝐬𝐭 𝐃𝐚𝐭𝐚 𝐓𝐲𝐩𝐞 𝐕𝐚𝐥𝐢𝐝𝐚𝐭𝐢𝐨𝐧:
+def test_data_types(df):
+ assert df.schema['client_id'].dataType == IntegerType(), "Incorrect data type for client_id"
+
+4. 𝐓𝐞𝐬𝐭 𝐍𝐮𝐥𝐥 𝐕𝐚𝐥𝐮𝐞𝐬:
+def test_null_values(df):
+ for col in df.columns:
+ assert df.filter(df[col].isNull()).count() == 0, f"Null values found in {col}"
+
+5. 𝐓𝐞𝐬𝐭 𝐁𝐮𝐬𝐢𝐧𝐞𝐬𝐬 𝐋𝐨𝐠𝐢𝐜 (𝐞.𝐠., 𝐁𝐢𝐥𝐥𝐢𝐧𝐠 𝐃𝐚𝐲):
+def test_billing_day_logic(df):
+ assert df.filter("billing_day NOT BETWEEN 1 AND 31").count() == 0, "Billing day out of range"
+
+
+-------------------------------------------------------  Data Engineering Questions -----------------------
+
+Interviewer:
+"Let's compare a single server setup to a multiple node cluster in data engineering. 
+
+Candidate:
+
+"A single server typically incurs lower initial costs and is simpler to manage. However, it may become costly if you need to scale up significantly due to hardware limitations. 
+In contrast, a multiple node cluster can distribute workloads and scale horizontally, but it comes with higher operational costs due to the need for more infrastructure and complex management."
+
+Interviewer:
+
+"Can you provide some specific figures to illustrate the cost differences?"
+
+For instance, a high-performance single server might cost $3,000 per month. 
+Setting up a multiple node cluster with similar combined capacity could cost $5,000 per month due to additional nodes, network overhead, and management costs."
+
+Interviewer:
+
+"What about performance differences between the two?"
+
+"A single server can handle tasks efficiently up to its capacity limit but may struggle with very large datasets and parallel processing tasks.
+
+A multiple node cluster excels in performance for big data workloads by distributing the processing across multiple nodes, allowing for parallel execution and faster data processing."
+
+
+
+Interviewer:
+
+"Can you give a specific example of a scenario where a multiple node cluster outperforms a single server?"
+
+"Sure. For a large ETL process involving terabytes of data, a single server might take several hours to complete the task due to its sequential processing and limited resources. 
+
+A multiple node cluster, using parallel processing across nodes, could complete the same task in a fraction of the time, say under an hour."
+Interviewer:
+
+"How does scalability compare between a single server and a multiple node cluster?"
+
+"A single server scales vertically, meaning you upgrade the hardware to add more power, but this has a limit. A multiple node cluster scales horizontally by adding more nodes to the cluster, which has no upper limit and can handle much larger datasets and more users concurrently."
+
+
+
+Interviewer:
+
+"What are the key challenges in managing a multiple node cluster compared to a single server?"
+
+
+
+Candidate:
+
+"Managing a multiple node cluster is more complex. It involves handling distributed data storage, ensuring fault tolerance, maintaining consistent performance across nodes, and dealing with network latency. 
+
+A single server, in contrast, is simpler to manage as everything is contained within a single machine
+
+Interviewer:
+Provide a real-world example where you had to choose between a single server and a multiple node cluster?
+
+Candidate:
+
+"In a project involving real-time data analytics for a large e-commerce platform, we initially used a single server setup. As data volume and user queries grew, the server became a bottleneck. Switching to a multiple node cluster allowed us to distribute the workload, significantly improving query response times and handling larger datasets efficiently."
+
+------------------------  🚀 𝐓𝐫𝐨𝐮𝐛𝐥𝐞𝐬𝐡𝐨𝐨𝐭𝐢𝐧𝐠 𝐃𝐚𝐭𝐚 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠: 𝐄𝐱𝐩𝐞𝐫𝐭 𝐈𝐧𝐬𝐢𝐠𝐡𝐭𝐬 𝐍𝐞𝐞𝐝𝐞𝐝! 🚀 --------------------------------
+
+𝟏𝐬𝐭 𝐈𝐬𝐬𝐮𝐞: 𝐖𝐫𝐢𝐭𝐢𝐧𝐠 𝐃𝐚𝐭𝐚 𝐭𝐨 𝐇𝐢𝐯𝐞 𝐓𝐚𝐛𝐥𝐞𝐬
+🔍 Problem: Facing delays when writing data into a partitioned Hive table, especially with huge data volumes. We have tried optimizing with Parquet format and partitioning, yet the process still takes a considerable amount of time.
+
+🔧 Solution Attempted: Initially, we used df.write().mode("append").partitionBy('abc','def').saveAsTable('table_name')
+but the time taken was more than anticipated. 
+
+We then experimented with 
+df.coalesce(10).write().mode("append").partitionBy('abc','def').saveAsTable('table_name')
+but encountered further delays.
+
+🔎 Seeking Suggestions: How can we optimize the write operation to reduce the processing time significantly?
+
+𝟐𝐧𝐝 𝐈𝐬𝐬𝐮𝐞: 𝐉𝐨𝐢𝐧𝐢𝐧𝐠 𝐋𝐚𝐫𝐠𝐞 𝐃𝐚𝐭𝐚𝐅𝐫𝐚𝐦𝐞𝐬
+🔍 Problem: We need to perform an inner join between two DataFrames, each containing a whopping 100 million records. However, we're aiming to complete the join operation within a maximum of one minute.
+
+🔧 Solution Attempted: We've explored various strategies, including optimizing partitioning, increasing parallelism, and considering different join algorithms. However, achieving the desired performance within the specified timeframe remains a challenge.
+
+🔎 Seeking Suggestions: What techniques or approaches can we implement to ensure the join operation is completed within one minute without compromising accuracy or quality?
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+Interview Question - Challenges you faced in your last project involving a Databricks PySpark pipeline!
+
+Interviewer:
+"Can you tell me about some challenges you faced in your last project involving a Databricks PySpark pipeline?"
+
+Candidate:
+"Sure, I'd be happy to discuss that. There were several key challenges we encountered, which required thoughtful solutions and collaboration across the team."
+
+1. Data Ingestion and Integration:
+
+Interviewer: "What were the specific issues with data ingestion?"
+Candidate: "We had difficulties with integrating various data sources. The data came in different formats and structures, including CSV, JSON, and Parquet. Handling these diverse formats and ensuring consistent schema was challenging. We used Databricks' capabilities to standardize and transform the data, but it took some time to set up efficient pipelines."
+
+2. Performance Optimization:
+
+Interviewer: "How did you tackle performance issues in your PySpark jobs?"
+Candidate: "Performance was a significant challenge, especially with large datasets. We encountered issues like long execution times and resource bottlenecks. To address this, we optimized our Spark jobs by:
+Implementing partitioning and bucketing to manage large data sets.
+Tuning Spark configurations such as executor memory and core allocation.
+Using caching effectively to avoid redundant computations.
+Profiling the jobs to identify and optimize slow stages."
+
+3. Data Quality and Consistency:
+
+Interviewer: "What approaches did you take to ensure data quality?"
+Candidate: "Data quality issues like missing values, duplicates, and inconsistent data formats were common. We implemented:
+Validation checks and data cleansing routines during the ETL process.
+Using Delta Lake for ACID transactions to ensure data consistency and reliability.
+Automated data quality checks and alerts to catch issues early."
+
+4. Managing Dependencies and Libraries:
+
+Interviewer: "Were there challenges related to managing dependencies?"
+Candidate: "Yes, managing dependencies in a distributed environment was tricky. Conflicting library versions and dependencies often led to runtime issues. We addressed this by:
+Using Databricks' cluster management features to install and manage libraries.
+Creating a unified environment configuration for all team members to ensure consistency.
+Regularly updating and testing libraries to avoid conflicts."
+
+5. Monitoring and Logging:
+
+Interviewer: "How did you handle monitoring and logging in your pipelines?"
+Candidate: "We faced challenges in ensuring comprehensive monitoring and logging. Key actions included:
+Configuring detailed logging using Log4j and ensuring logs were written to cloud storage.
+Integrating Datadog for real-time monitoring and setting up alerts for critical failures.
+Regularly reviewing logs to identify and troubleshoot issues quickly."
+
+
+---------------------------------------
+
+
+𝐈𝐧 𝐭𝐡𝐞 𝐃𝐚𝐭𝐚 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠, 𝐨𝐧𝐞 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧 𝐞𝐜𝐡𝐨𝐞𝐬 𝐥𝐨𝐮𝐝𝐥𝐲:
+"𝐖𝐡𝐚𝐭'𝐬 𝐭𝐡𝐞 𝐒𝐜𝐚𝐥𝐞 𝐨𝐟 𝐃𝐚𝐭𝐚 𝐘𝐨𝐮 𝐌𝐚𝐧𝐚𝐠𝐞 𝐃𝐚𝐢𝐥𝐲?"
+
+🔑 𝐒𝐭𝐫𝐚𝐭𝐞𝐠𝐢𝐜 𝐒𝐭𝐞𝐩𝐬 𝐭𝐨 𝐄𝐬𝐭𝐢𝐦𝐚𝐭𝐞:
+
+𝐔𝐬𝐞𝐫 𝐁𝐚𝐬𝐞 𝐀𝐧𝐚𝐥𝐲𝐬𝐢𝐬:
+Establish the total user base.
+Identify the percentage of daily active users.
+
+𝐐𝐮𝐚𝐧𝐭𝐢𝐟𝐲 𝐃𝐚𝐢𝐥𝐲 𝐈𝐧𝐭𝐞𝐫𝐚𝐜𝐭𝐢𝐨𝐧𝐬:
+Ascertain the average interactions per user per day.
+Gauge the peak interaction frequencies.
+
+𝐒𝐭𝐨𝐫𝐚𝐠𝐞 𝐈𝐧𝐬𝐢𝐠𝐡𝐭𝐬:
+For each interaction, measure the associated data size.
+Extrapolate for daily storage necessities.
+Optionally, the project is for prolonged storage.
+
+🌐 𝐄𝐱𝐚𝐦𝐩𝐥𝐞: 𝐒𝐭𝐫𝐞𝐚𝐦𝐌𝐚𝐬𝐭𝐞𝐫 𝐃𝐚𝐢𝐥𝐲 𝐃𝐚𝐭𝐚 𝐃𝐲𝐧𝐚𝐦𝐢𝐜𝐬
+𝐀𝐬𝐬𝐮𝐦𝐩𝐭𝐢𝐨𝐧𝐬:
+500 million monthly active users.
+60% use the streaming service daily.
+Users engage in an average of 3 activities per day.
+15% of activities involve media.
+Data is retained for 6 years.
+
+𝐄𝐬𝐭𝐢𝐦𝐚𝐭𝐢𝐨𝐧𝐬:
+Daily Active Users (DAU): 500 million×60%=300 million
+Activity QPS: 300 million×3 activities24 hours×3600 seconds≈11,000
+Peek QPS: 2×QPS≈22,000
+2×QPS≈22,000
+
+𝐌𝐞𝐝𝐢𝐚 𝐒𝐭𝐨𝐫𝐚𝐠𝐞:
+Average activity size: 64 bytes+140 bytes+1 MB×15%
+Daily Media Storage: 300 million×3×15%×1 MB=135 TB per day
+6-year Media Storage: 135 TB×365×6≈294 PB
+
+💡 𝐈𝐧𝐬𝐢𝐠𝐡𝐭𝐬:
+This method illustrates a profound understanding of data scale, showcasing your analytical acumen tailored to the company's data ecosystem.
+
